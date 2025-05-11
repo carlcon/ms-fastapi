@@ -64,11 +64,18 @@ cp .env.example .env
 python scripts/generate_secret.py
 ```
 
-## Development
+## Getting Started
 
 Start the development server:
 ```bash
 uvicorn app.main:app --reload
+```
+
+Print text on image from terminal
+```bash
+# activate the virtual env
+source venv/bin/activate
+python app/ocr.py
 ```
 
 The API will be available at `http://localhost:8000`
@@ -112,15 +119,3 @@ Pre-commit hooks are configured for:
 - YAML validation
 - Large file checks
 - Automated testing
-
-## Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| DEBUG | Debug mode | False |
-| ECHO_ACTIVE | Enable echo endpoint | 1 |
-| HOST | Server host | 0.0.0.0 |
-| PORT | Server port | 8000 |
-| SECRET_KEY | JWT secret key | Required |
-| ALGORITHM | JWT algorithm | HS256 |
-

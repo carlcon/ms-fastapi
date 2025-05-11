@@ -20,7 +20,7 @@ LOG_LEVEL = config('LOG_LEVEL', default='info')
 DATABASE_URL = config('DATABASE_URL', default='sqlite:///./sql_app.db')
 
 # Security
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY', default='a0f3a33f59c78a785351cae9d29440964376c411658b3552397ab648a0b0030f')
 ALGORITHM = config('ALGORITHM', default='HS256')
 ACCESS_TOKEN_EXPIRE_MINUTES = config('ACCESS_TOKEN_EXPIRE_MINUTES', default=30, cast=int)
 

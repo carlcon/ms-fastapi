@@ -96,8 +96,8 @@ fi
 
 # Start the FastAPI application with Gunicorn
 echo "Starting FastAPI application with Gunicorn..."
-if [ -f "main.py" ]; then
-    gunicorn main:app \
+if [ -f "/app/main.py" ]; then
+    gunicorn app.main:app \
         --bind "${HOST}:${PORT}" \
         --workers "${WORKERS}" \
         --worker-class uvicorn.workers.UvicornWorker \

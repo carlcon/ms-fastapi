@@ -4,6 +4,8 @@ COPY ./entrypoint.sh /entrypoint.sh
 COPY ./app /app
 COPY ./requirements.txt /requirements.txt
 
+RUN chmod +x /entrypoint.sh
+
 RUN apt-get update && \
     apt-get install -y \
         build-essential \
